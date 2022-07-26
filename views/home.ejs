@@ -1,0 +1,15 @@
+<% if(user) { %> <% var name = user %>
+<h1>WELCOME <%= user.name %></h1>
+
+<form action="/register" method="post">
+  <input type="text" id="name" name="name" type="hidden" value="user.name" />
+  <br />
+  <br />
+  <input type="submit" value="submit" />
+</form>
+
+<script>
+  console.log(user);
+  document.getElementById("name").value = name;
+</script>
+<% } %>
